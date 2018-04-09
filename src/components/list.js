@@ -8,11 +8,14 @@ class List extends Component{
         this.props.getList();
     }
     render(){
-        console.log('props: ', this.props)
         
-
+        console.log(this.props.list)
         const listItems = this.props.list.map( (item, index) => {
-            return(<li key={index} className="list-group-item">{item.title}</li>)
+            return(
+                <li key={index} className="list-group-item">
+                    <Link to={`/item/${item._id}`} >{item.title}</Link>
+                </li>
+            )
         })
 
         return(
