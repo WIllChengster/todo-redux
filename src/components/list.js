@@ -9,7 +9,6 @@ class List extends Component{
     }
     render(){
         
-        console.log(this.props.list)
         const listItems = this.props.list.map( (item, index) => {
             return(
                 <li key={index} className="list-group-item">
